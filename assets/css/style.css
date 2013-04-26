@@ -1,0 +1,28 @@
+/* ----------- .slider ---------- */
+.slider {
+	height: 300px;
+	border-bottom: 1px #000 solid; /**/
+}
+
+/* ---------- .featured --------- */
+.featured {
+	height: 300px;
+	border-bottom: 1px #000 solid; /**/
+}
+
+/* ----------- .content --------- */
+.content {
+	height: 800px;
+	border-bottom: 1px #000 solid; /**/
+}
+
+/* ----------- .submit ---------- */
+.submit {
+	height: 300px;
+	border-bottom: 1px #000 solid;
+}
+
+/* ----------- <footer> --------- */
+footer {
+	height: 100px;
+}
