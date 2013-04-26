@@ -1,4 +1,3 @@
-ui
+TCN Rice Expert UI
 ==
 
-TCN Rice Expert UI (HTML pages)
