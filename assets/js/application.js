@@ -1,3 +1,5 @@
+var i = 0;
+
 $(document).ready(function() {
     $('a[href^="#"]').on('click',function (e) {
         e.preventDefault();
@@ -22,6 +24,22 @@ $(document).ready(function() {
 			prevtext : '<i class="icon-angle-left icon-4x" style="margin-top: -380px; margin-left: -120px; position: absolute;"></i>',
             randomstart : false, 
 			responsive : false
+    });
+    $('.bjqs-prev, .bjqs-next').click(function() {
+    	if(i == 0) 
+    	{
+    		//$('#step3').transition({ opacity: 0 });
+    		$('#step3').css('background-image', "url('assets/img/moor-lakes-opabin-highland-yoho-national-park-british-columbia-canada-800x1280.jpg')");
+    		//$('#step3').transition({ opacity: 100 });
+    	}
+    	else 
+    	{
+    		//$('#step3').transition({ opacity: 0 });
+    		$('#step3').css('background-image', "url('assets/img/House-on-a-plain.jpg')");
+    		//$('#step3').transition({ opacity: 100 });
+    	}
+		if(i == 0) i = 1;
+		else i = 0;
     });
 });
 
