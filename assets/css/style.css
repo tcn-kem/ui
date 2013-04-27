@@ -16,6 +16,34 @@
 	border-bottom: 1px #000 solid; /**/
 }
 
+/* ----------- #step3 --------- */
+
+#step3 {
+	/*background-image: url('../assets/img/vineyard-grapes-lowland-plantation-sun-morning-nature-800x1280.jpg');*/
+	background-image: url('../img/Highland-25-800x1280.jpg');
+	color: white;
+}
+
+#banner-slide {
+	margin-top: 150px;
+}
+
+#banner-slide .row {
+	margin-left: 100px;
+}
+
+#banner-slide img {
+}
+
+#banner-slide li h1 {
+	text-align: center;
+	margin-top: 20px;
+}
+
+#banner-slide li p {
+	text-align: center;
+}
+
 /* ----------- .submit ---------- */
 .submit {
 	height: 300px;
