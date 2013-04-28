@@ -1,4 +1,16 @@
-var i = 0;
+var terrainSelected = 0;
+var north = ["Uthai Thani", "Nakhon Sawan", "Phetchabun", "Phichit", "Kamphaeng Phet", "Tak", "Sukhothai", 
+				"Phitsanulok", "Uttaradit", "Phrae", "Lampang", "Lamphun", "Chiang Mai", "Mae Hong Son",
+				"Chiang Rai", "Phayao", "Nan"];
+var central = ["Phetchaburi", "Ratchaburi", "Samutsakhon", "Nonthaburi", "Nakhonpathom", "Bangkok", "Samutprakan",
+				"Samutsongkhram", "Pathumthani", "Kanchanaburi", "Suphanburi", "Ayutthaya", "Nakhonnayok",
+				"Angthong", "Chainat", "Lopburi", "Saraburi", "Singburi", "Sakaeo", "Prachinburi", "Chachoengsao"];
+var northeast = ["Nakhon Ratchasima", "Buriram", "Surin", "Si Sa Ket", "Ubon Ratchathani", "Amnat Charoen",
+				"Yasothon", "Roi Et", "Mahasarakham", "Khon Kaen", "Chaiyaphum", "Loei", "Nong Bualumphu",
+				"Udon Thani", "Kalasin", "Mukdahan", "Sakon Nakhon", "Nakhon Phanom", "Nong Khai"];
+var east = ["Chonburi", "Rayong", "Chanthaburi", "Trat"];
+var south = ["Prachuap Khirikhan", "Chumphon", "Ranong", "Surat Thani", "Phangnga", "Phuket", "Nakhon Srithammarat",
+				"Krabi", "Phattalung", "Satun", "Songkla", "Pattani", "Yala", "Narathiwat", "Trang", "Bueng Kan"];
 
 $(document).ready(function() {
     $('a[href^="#"]').on('click',function (e) {
@@ -25,8 +37,9 @@ $(document).ready(function() {
             randomstart : false, 
 			responsive : false
     });
+
     $('.bjqs-prev, .bjqs-next').click(function() {
-    	if(i == 0) 
+    	if(terrainSelected == 0) 
     	{
     		$('#step3').css('background-image', "url('assets/img/moor-lakes-opabin-highland-yoho-national-park-british-columbia-canada-800x1280.jpg')");
     		$('#selected-terrain').text('Highland');
@@ -36,9 +49,11 @@ $(document).ready(function() {
     		$('#step3').css('background-image', "url('assets/img/House-on-a-plain.jpg')");
 			$('#selected-terrain').text('Lowland');    		
     	}
-		if(i == 0) i = 1;
-		else i = 0;
+		if(terrainSelected == 0) terrainSelected = 1;
+		else terrainSelected = 0;
     });
 });
 
+function changeProvince() {
 
+}
