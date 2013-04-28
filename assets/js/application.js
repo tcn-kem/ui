@@ -28,15 +28,13 @@ $(document).ready(function() {
     $('.bjqs-prev, .bjqs-next').click(function() {
     	if(i == 0) 
     	{
-    		//$('#step3').transition({ opacity: 0 });
     		$('#step3').css('background-image', "url('assets/img/moor-lakes-opabin-highland-yoho-national-park-british-columbia-canada-800x1280.jpg')");
-    		//$('#step3').transition({ opacity: 100 });
+    		$('#selected-terrain').text('Highland');
     	}
     	else 
     	{
-    		//$('#step3').transition({ opacity: 0 });
     		$('#step3').css('background-image', "url('assets/img/House-on-a-plain.jpg')");
-    		//$('#step3').transition({ opacity: 100 });
+			$('#selected-terrain').text('Lowland');    		
     	}
 		if(i == 0) i = 1;
 		else i = 0;

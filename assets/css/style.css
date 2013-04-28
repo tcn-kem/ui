@@ -20,7 +20,6 @@
 
 #step2 {
 	background-color: #B1C2B3;
-	padding: 40px;
 }
 
 #step2 img {
@@ -65,9 +64,37 @@
 
 /* ----------- .submit ---------- */
 .submit {
-	height: 300px;
+	height: 350px;
 	border-bottom: 1px #000 solid;
 	background-color: #778691;
+}
+
+.submit .row-fluid {
+	margin-top: 60px;
+}
+
+.submit a {
+	color: black;
+}
+
+.submit a:hover {
+	color: #424242;
+}
+
+.submit h3 {
+	text-align: center;
+}
+
+.submit h4 {
+	text-align: center;
+}
+
+.submit p {
+	text-align: center;
+}
+
+.submit .span3:last-child {
+	padding: 20px 0px;
 }
 
 /* ----------- <footer> --------- */
