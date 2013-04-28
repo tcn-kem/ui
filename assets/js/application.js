@@ -52,8 +52,43 @@ $(document).ready(function() {
 		if(terrainSelected == 0) terrainSelected = 1;
 		else terrainSelected = 0;
     });
+
+    $('input[name="area"]').change(function() {
+    	var areaSelected = $('input[name="area"]:checked').val();
+    	$('#area').text($('input[name="area"]:checked').val());
+        $('#province-list').empty();
+        if(areaSelected == "North") {
+            $.each(north, function(index, province) {
+                $('#province-list').append($("<option></option>").attr("value", index).text(province));
+            });
+        }
+        else if(areaSelected == "Central") {
+            $.each(central, function(index, province) {
+                $('#province-list').append($("<option></option>").attr("value", index).text(province));
+            });   
+        }
+        else if(areaSelected == "North East") {
+            $.each(northeast, function(index, province) {
+                $('#province-list').append($("<option></option>").attr("value", index).text(province));
+            });
+        }
+        else if(areaSelected == "East") {
+            $.each(east, function(index, province) {
+                $('#province-list').append($("<option></option>").attr("value", index).text(province));
+            });
+        }
+        else {
+            $.each(south, function(index, province) {
+                $('#province-list').append($("<option></option>").attr("value", index).text(province));
+            });
+        }
+        
+    });
+
+    $('#province-list').change(function() {
+        var provinceSelected = $('#province-list option:selected').text();
+        $('#area-selected').text('Selected: ' + provinceSelected);
+        $('#selected-province').text(provinceSelected);
+    });
 });
 
-function changeProvince() {
-
-}
