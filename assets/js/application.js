@@ -36,7 +36,6 @@ $(document).ready(function() {
 			prevtext : '<i class="icon-angle-left icon-4x" style="margin-top: -380px; margin-left: -120px; position: absolute;"></i>',
 			randomstart : false, 
 			responsive : false
-<<<<<<< HEAD
     });
 
     $('.bjqs-prev, .bjqs-next').click(function() {
@@ -91,8 +90,6 @@ $(document).ready(function() {
         $('#area-selected').text('Selected: ' + provinceSelected);
         $('#selected-province').text(provinceSelected);
     });
-=======
-	});
 
 	$('.bjqs-prev, .bjqs-next').click(function() {
 		if(terrainSelected == 0) 
@@ -150,28 +147,31 @@ $(document).ready(function() {
 	// Step 1
 	$('#step1 .rounded-shape').click(function() {
 		$('#step1 .kind').text('Rounded Shape');
+		$('#selected-kind').text('Rounded Shape');
 		$('#step1 .kind-detail').text('Rounded Detail')
 	});
 	
 	$('#step1 .sticky').click(function() {
 		$('#step1 .kind').text('Sticky');
+		$('#selected-kind').text('Sticky');
 		$('#step1 .kind-detail').text('Sticky Detail')
 	});
 	
 	$('#step1 .japanese').click(function() {
 		$('#step1 .kind').text('Japanese Rice');
+		$('#selected-kind').text('Japanese Rice');
 		$('#step1 .kind-detail').text('Japanese Detail')
 	});
 	
 	$('#step1 .barley').click(function() {
 		$('#step1 .kind').text('Barley');
+		$('#selected-kind').text('Barley');
 		$('#step1 .kind-detail').text('Barley Detail')
 	});
 	
 	$('#step1 .wheat').click(function() {
 		$('#step1 .kind').text('Wheat');
+		$('#selected-kind').text('Wheat');
 		$('#step1 .kind-detail').text('Wheat Detail')
 	});
->>>>>>> Update everything
 });
-
