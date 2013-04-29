@@ -9,8 +9,8 @@ var northeast = ["Nakhon Ratchasima", "Buriram", "Surin", "Sisaket", "Ubon Ratch
 				"Yasothon", "Roi Et", "Maha Sarakham", "Khon Kaen", "Chaiyaphum", "Loei", "Nongbua Lamphu",
 				"Udon Thani", "Kalasin", "Mukdahan", "Sakon Nakhon", "Nakhon Phanom", "Nong Khai", "Bueng Kan"];
 var east = ["Chonburi", "Rayong", "Chanthaburi", "Trat"];
-var south = ["Prachuap Khiri Khan", "Chumphon", "Ranong", "Surat Thani", "Phangnga", "Phuket", "Nakhon Si Thammarat",
-				"Krabi", "Phattalung", "Satun", "Songkla", "Pattani", "Yala", "Narathiwat", "Trang"];
+var south = ["Prachuap Khiri Khan", "Chumphon", "Ranong", "Surat Thani", "Phang Nga", "Phuket", "Nakhon Si Thammarat",
+				"Krabi", "Phatthalung", "Satun", "Songkhla", "Pattani", "Yala", "Narathiwat", "Trang"];
 
 $(document).ready(function() {
 	$('a[href^="#"]').on('click',function (e) {
