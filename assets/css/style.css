@@ -35,10 +35,13 @@ h1 {
 
 .navi .brand {
 	float: left;
+	color: #fff;
+	height: 60px;
+	line-height: 60px;
+	font-size: 30px;
 }
 
 .navi .nav {
-	float: right;
 	margin-bottom: 0;
 }
 
@@ -50,13 +53,19 @@ h1 {
 	color: #FFF;
 	height: 60px;
 	line-height: 60px;
-	padding: 0 10px;
+	padding: 0 23px;
+	
+	-webkit-transition: color 0.15s ease-in-out;
+	-moz-transition: color 0.15s ease-in-out;
+	-ms-transition: color 0.15s ease-in-out;
+	-o-transition: color 0.15s ease-in-out;
+	transition: color 0.15s ease-in-out;
 }
 
 .navi .nav > li > a:hover {
 	color: #222;
 	text-decoration: none;
-	background-color: #222;
+	background-color: #27a1c5;
 	
 	-webkit-transition: color 0.15s ease-in-out;
 	-moz-transition: color 0.15s ease-in-out;
