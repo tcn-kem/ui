@@ -2,15 +2,15 @@ var terrainSelected = 0;
 var north = ["Uthai Thani", "Nakhon Sawan", "Phetchabun", "Phichit", "Kamphaeng Phet", "Tak", "Sukhothai", 
 				"Phitsanulok", "Uttaradit", "Phrae", "Lampang", "Lamphun", "Chiang Mai", "Mae Hong Son",
 				"Chiang Rai", "Phayao", "Nan"];
-var central = ["Phetchaburi", "Ratchaburi", "Samutsakhon", "Nonthaburi", "Nakhonpathom", "Bangkok", "Samutprakan",
-				"Samutsongkhram", "Pathumthani", "Kanchanaburi", "Suphanburi", "Ayutthaya", "Nakhonnayok",
-				"Angthong", "Chainat", "Lopburi", "Saraburi", "Singburi", "Sakaeo", "Prachinburi", "Chachoengsao"];
-var northeast = ["Nakhon Ratchasima", "Buriram", "Surin", "Si Sa Ket", "Ubon Ratchathani", "Amnat Charoen",
-				"Yasothon", "Roi Et", "Mahasarakham", "Khon Kaen", "Chaiyaphum", "Loei", "Nong Bualumphu",
-				"Udon Thani", "Kalasin", "Mukdahan", "Sakon Nakhon", "Nakhon Phanom", "Nong Khai"];
+var central = ["Phetchaburi", "Ratchaburi", "Samut Sakhon", "Nonthaburi", "Nakhon Pathom", "Bangkok", "Samut Prakan",
+				"Samut Songkhram", "Pathum Thani", "Kanchanaburi", "Suphanburi", "Ayutthaya", "Nakhon Nayok",
+				"Ang Thong", "Chainat", "Lopburi", "Saraburi", "Singburi", "Sa Kaeo", "Prachinburi", "Chachoengsao"];
+var northeast = ["Nakhon Ratchasima", "Buriram", "Surin", "Sisaket", "Ubon Ratchathani", "Amnat Charoen",
+				"Yasothon", "Roi Et", "Maha Sarakham", "Khon Kaen", "Chaiyaphum", "Loei", "Nongbua Lamphu",
+				"Udon Thani", "Kalasin", "Mukdahan", "Sakon Nakhon", "Nakhon Phanom", "Nong Khai", "Bueng Kan"];
 var east = ["Chonburi", "Rayong", "Chanthaburi", "Trat"];
-var south = ["Prachuap Khirikhan", "Chumphon", "Ranong", "Surat Thani", "Phangnga", "Phuket", "Nakhon Srithammarat",
-				"Krabi", "Phattalung", "Satun", "Songkla", "Pattani", "Yala", "Narathiwat", "Trang", "Bueng Kan"];
+var south = ["Prachuap Khiri Khan", "Chumphon", "Ranong", "Surat Thani", "Phangnga", "Phuket", "Nakhon Si Thammarat",
+				"Krabi", "Phattalung", "Satun", "Songkla", "Pattani", "Yala", "Narathiwat", "Trang"];
 
 $(document).ready(function() {
 	$('a[href^="#"]').on('click',function (e) {
@@ -96,11 +96,13 @@ $(document).ready(function() {
 		{
 			$('#step3').css('background-image', "url('assets/img/moor-lakes-opabin-highland-yoho-national-park-british-columbia-canada-800x1280.jpg')");
 			$('#selected-terrain').text('Highland');
+			$('#submit-terrain').val('highland');
 		}
 		else 
 		{
 			$('#step3').css('background-image', "url('assets/img/House-on-a-plain.jpg')");
 			$('#selected-terrain').text('Lowland');    		
+			$('#submit-terrain').val('lowland');
 		}
 		if(terrainSelected == 0) terrainSelected = 1;
 		else terrainSelected = 0;
@@ -142,36 +144,53 @@ $(document).ready(function() {
 		var provinceSelected = $('#province-list option:selected').text();
 		$('#area-selected').text('Selected: ' + provinceSelected);
 		$('#selected-province').text(provinceSelected);
+		$('#submit-area').val(provinceSelected);
 	});
 	
 	// Step 1
 	$('#step1 .rounded-shape').click(function() {
 		$('#step1 .kind').text('Rounded Shape');
 		$('#selected-kind').text('Rounded Shape');
+		$('#submit-kind').val('Rounded Shape');
 		$('#step1 .kind-detail').text('Rounded Detail')
 	});
 	
 	$('#step1 .sticky').click(function() {
 		$('#step1 .kind').text('Sticky');
 		$('#selected-kind').text('Sticky');
+		$('#submit-kind').val('Sticky');
 		$('#step1 .kind-detail').text('Sticky Detail')
 	});
 	
 	$('#step1 .japanese').click(function() {
 		$('#step1 .kind').text('Japanese Rice');
 		$('#selected-kind').text('Japanese Rice');
+		$('#submit-kind').val('Japanese Rice');
 		$('#step1 .kind-detail').text('Japanese Detail')
 	});
 	
 	$('#step1 .barley').click(function() {
 		$('#step1 .kind').text('Barley');
 		$('#selected-kind').text('Barley');
+		$('#submit-kind').val('Barley');
 		$('#step1 .kind-detail').text('Barley Detail')
 	});
 	
 	$('#step1 .wheat').click(function() {
 		$('#step1 .kind').text('Wheat');
 		$('#selected-kind').text('Wheat');
+		$('#submit-kind').val('Wheat');
 		$('#step1 .kind-detail').text('Wheat Detail')
+	});
+
+	$('#submit-form').click(function() {
+		if($('#submit-kind').val() == "" || $('#submit-area').val() == "" || $('#submit-terrain').val() == "") {
+			alert('invalid');
+			return false;
+		}
+		else { 
+			alert('valid');
+			$('#riceform').submit();
+		}
 	});
 });
