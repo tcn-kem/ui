@@ -193,4 +193,12 @@ $(document).ready(function() {
 			$('#riceform').submit();
 		}
 	});
+	
+	// popover
+	$(function () {
+		$('.steps-kind').popover({placement: "bottom"});
+		$('.steps-province').popover({placement: "bottom"});
+		$('.steps-terrain').popover({placement: "bottom"});
+		$('.steps-result').popover({placement: "bottom"});
+	});
 });
