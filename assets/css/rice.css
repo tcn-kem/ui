@@ -1,0 +1,17 @@
+#content1 .span6 img {
+	padding: 50px;
+}
+
+#content1 .span6:first-child {
+	padding-top: 50px;
+	padding-left: 50px;
+	padding-right: 50px;
+}
+
+#content1 .text {
+	display: inline-block;
+}
+
+#content2 {
+	padding-left: 50px;
+}
